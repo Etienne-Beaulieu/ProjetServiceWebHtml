@@ -1,0 +1,473 @@
+{
+	"info": {
+		"_postman_id": "12d28728-6c5d-435b-9420-e4f282943d7c",
+		"name": "Collection Projet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41527203"
+	},
+	"item": [
+		{
+			"name": "CreerUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nom\": \"Test\",\r\n  \"prenom\": \"Test\",\r\n  \"email\": \"safasfas\",\r\n  \"password\": \"Test\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://etiennebeaulieuapitaches.onrender.com/api/users/register",
+					"protocol": "https",
+					"host": [
+						"etiennebeaulieuapitaches",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RecupererCle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"etienne.beaulieu.1996@gmail.com\",\r\n  \"password\": \"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://etiennebeaulieuapitaches.onrender.com/api/users/apikey",
+					"protocol": "https",
+					"host": [
+						"etiennebeaulieuapitaches",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"apikey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegenereCle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"etienne.beaulieu.1996@gmail.com\",\r\n  \"password\": \"Test\",\r\n  \"regenerate\": \"True\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://etiennebeaulieuapitaches.onrender.com/api/users/apikey",
+					"protocol": "https",
+					"host": [
+						"etiennebeaulieuapitaches",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"apikey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTouteTaches",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "60707fd9518728474078d855ab7778",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://etiennebeaulieuapitaches.onrender.com/api/taches",
+					"protocol": "https",
+					"host": [
+						"etiennebeaulieuapitaches",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"taches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AjouterTache",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "60707fd9518728474078d855ab7778",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titre\": \"Test\",\r\n  \"description\": \"Test\",\r\n  \"date_debut\": \"2025-05-15\",\r\n  \"date_echeance\": \"2025-05-20\",\r\n  \"complete\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://etiennebeaulieuapitaches.onrender.com/api/taches",
+					"protocol": "https",
+					"host": [
+						"etiennebeaulieuapitaches",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"taches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTacheById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://etiennebeaulieuapitaches.onrender.com/api/taches/5",
+					"protocol": "https",
+					"host": [
+						"etiennebeaulieuapitaches",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"taches",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModifierTache",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "60707fd9518728474078d855ab7778",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titre\": \"TestModifier\",\r\n  \"description\": \"Test\",\r\n  \"date_debut\": \"2025-05-15\",\r\n  \"date_echeance\": \"2025-05-20\",\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://etiennebeaulieuapitaches.onrender.com/api/taches/4",
+					"protocol": "https",
+					"host": [
+						"etiennebeaulieuapitaches",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"taches",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModifierTacheStatut",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "60707fd9518728474078d855ab7778",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"complete\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://etiennebeaulieuapitaches.onrender.com/api/taches/4/statut",
+					"protocol": "https",
+					"host": [
+						"etiennebeaulieuapitaches",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"taches",
+						"4",
+						"statut"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTache",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "60707fd9518728474078d855ab7778",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://etiennebeaulieuapitaches.onrender.com/api/taches/4",
+					"protocol": "https",
+					"host": [
+						"etiennebeaulieuapitaches",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"taches",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AjouterSousTache",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "60707fd9518728474078d855ab7778",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titre\": \"Test\",\r\n  \"complete\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://etiennebeaulieuapitaches.onrender.com/api/taches/5/sous-taches",
+					"protocol": "https",
+					"host": [
+						"etiennebeaulieuapitaches",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"taches",
+						"5",
+						"sous-taches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModifierSousTache",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "60707fd9518728474078d855ab7778",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titre\": \"Test Modifier\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://etiennebeaulieuapitaches.onrender.com/api/taches/5/sous-taches/7",
+					"protocol": "https",
+					"host": [
+						"etiennebeaulieuapitaches",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"taches",
+						"5",
+						"sous-taches",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModifierSousTacheStatut",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "60707fd9518728474078d855ab7778",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"complete\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://etiennebeaulieuapitaches.onrender.com/api/taches/5/sous-taches/7/statut",
+					"protocol": "https",
+					"host": [
+						"etiennebeaulieuapitaches",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"taches",
+						"5",
+						"sous-taches",
+						"7",
+						"statut"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteSousTache",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "60707fd9518728474078d855ab7778",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://etiennebeaulieuapitaches.onrender.com/api/taches/5/sous-taches/7",
+					"protocol": "https",
+					"host": [
+						"etiennebeaulieuapitaches",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"taches",
+						"5",
+						"sous-taches",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTouteTachesByUserId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "60707fd9518728474078d855ab7778",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://etiennebeaulieuapitaches.onrender.com/api/taches/utilisateur/3",
+					"protocol": "https",
+					"host": [
+						"etiennebeaulieuapitaches",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"taches",
+						"utilisateur",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
