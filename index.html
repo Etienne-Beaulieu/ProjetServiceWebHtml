@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion Utilisateur - API Tâches</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Interface Utilisateur API</h1>
+
+  <!-- Formulaire d'ajout user' -->
+  <form id="registerForm">
+    <h2>Créer un nouvel utilisateur</h2>
+    <label for="prenom">Prénom</label>
+    <input type="text" id="prenom" name="prenom" required>
+
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" name="nom" required>
+
+    <label for="emailReg">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="passwordReg">Mot de passe</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Créer l'utilisateur</button>
+
+    <div id="registerResult" class="result"></div>
+  </form>
+
+  <!-- Formulaire pour recuperer ou generer une cle API -->
+  <form id="cleapiForm">
+    <h2>Obtenir ou régénérer une clé API</h2>
+
+    <label for="emailKey">Email</label>
+    <input type="email" id="emailCle" name="email" required>
+
+    <label for="passwordKey">Mot de passe</label>
+    <input type="password" id="passwordCle" name="password" required>
+
+    <label>
+      <input type="checkbox" id="regenerate" name="regenerate">
+      Régénérer une nouvelle clé API
+    </label>
+
+    <button type="submit">Obtenir la clé API</button>
+
+    <div id="cleapiResult" class="result"></div>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
